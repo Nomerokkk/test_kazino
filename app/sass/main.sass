@@ -1,0 +1,187 @@
+@font-face
+	font-family: "Days"
+	src: url("../fonts/days.ttf")
+
+
+@mixin gradient($from, $to)
+  background-color: $from
+  background-image: -moz-linear-gradient($from, $to)
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to))
+  background-image: -webkit-linear-gradient($from, $to)
+  background-image: -o-linear-gradient($from, $to)
+
+* 
+	box-sizing: border-box
+body
+	margin: 0
+	padding: 0
+	width: 100%
+	height: 100%
+	min-width: 320px
+	background: url(../img/bg.jpg) top left 
+	background-size: cover
+	font-family: "Arial", sans-serif
+.wrapper
+	width: 100%
+	height: 100%
+	.stol-wrapper
+		width: 310px
+		margin: 15% auto
+		position: relative
+		padding-bottom: 30px
+		.cart-group
+			position: absolute
+			z-index: 10
+			&.one
+				left: 0
+				top: 0
+			&.two
+				top: 0
+				right: 0
+			&.three
+				bottom: 0
+				left: 0
+			&.four
+				bottom: 0
+				right: 0
+			.fishka
+				width: 34px
+				height: 35px
+				position: absolute
+				left: -30px
+				top: 12px
+				border-radius: 50%
+				&.active
+					box-shadow: -3px -2px 5px 2px #f8d32c;
+				&.no-active
+					&:before
+							width: 100%
+							height: 100%
+							background: rgba(0,0,0,.37)
+							position: absolute
+							content: ""
+							left: 0
+							top: 0
+							border-radius: 50%
+			.row-carts
+				
+				.item
+					overflow: hidden
+					float: left
+					width: 32px
+					height: 43px
+					border-radius: 5px
+					position: relative
+					&:first-child
+						transform: rotate(-10deg)
+					&:last-child
+						transform: rotate(14deg)
+						margin-left: -10px
+				&.no-active
+					.item
+						&:before
+							width: 100%
+							height: 100%
+							background: rgba(0,0,0,.37)
+							position: absolute
+							content: ""
+							left: 0
+							top: 0
+							border-radius: 4px
+				&.active
+					.item
+						box-shadow: 0px 0px 5px 2px #f8d32c;
+			.stavka
+				clear: both
+				color: #e5e0c4
+				font-weight: bold
+				@include gradient(#edb722, #cd6c05)
+				text-align: center
+				position: relative
+				z-index: 1
+				top: -5px
+				border-radius: 4px
+				width: 46px
+				margin: auto
+				padding: 4px
+				font-size: 11px
+				&.no-active
+					&:before
+						width: 100%
+						height: 100%
+						background: rgba(0,0,0,.37)
+						position: absolute
+						content: ""
+						left: 0
+						top: 0
+						border-radius: 4px
+				&.active
+					box-shadow: 0px 3px 5px 0px #f8d32c;
+				&.lost
+					text-transform: uppercase
+					@include gradient(#ec8024, #d36546)
+				&.wins
+					text-transform: uppercase
+					@include gradient(#81c33b, #1b7b10)
+			.time
+				font-weight: bold
+				color: #ddebdf
+				background: url(../img/time.png) no-repeat
+				height: 22px
+				width: 22px
+				text-align: center
+				font-size: 11px
+				padding: 5px 0
+				position: absolute
+				bottom: -8px
+				left: -8px
+				z-index: 1
+				border-radius: 50%
+				&.active
+					box-shadow: -2px 3px 5px 0px #f8d32c;
+				&.no-active
+					&:before
+						width: 100%
+						height: 100%
+						background: rgba(0,0,0,.37)
+						position: absolute
+						content: ""
+						left: 0
+						top: 0
+						border-radius: 50%
+
+		.person
+			text-align: center
+			margin-bottom: -33px
+		.stol
+			z-index: 1
+			position: relative
+			width: 267px
+			margin: auto
+			height: 143px
+			background: url(../img/stol.png) no-repeat
+			padding: 10px;
+			background-size: contain
+			h1
+				color: #c0d7c0
+				font-size: 15.41px
+				text-align: center
+				font-family: "Days"
+				margin: 7px 0
+			.row-carts
+				text-align: center
+				.item
+					display: inline-block
+					width: 29px
+					height: 43px
+					overflow: hidden
+					border-radius: 2px
+					img
+						width: auto
+						height: auto
+			.title-company-name
+				font-size: 18px
+				color: #4e9950
+				text-align: center
+				text-transform: uppercase
+				font-family: "Days"

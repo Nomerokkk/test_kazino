@@ -1,0 +1,201 @@
+@font-face {
+  font-family: "Days";
+  src: url("../fonts/days.ttf"); }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  background: url(../img/bg.jpg) top left;
+  -webkit-background-size: cover;
+          background-size: cover;
+  font-family: "Arial", sans-serif; }
+
+.wrapper {
+  width: 100%;
+  height: 100%; }
+  .wrapper .stol-wrapper {
+    width: 310px;
+    margin: 15% auto;
+    position: relative;
+    padding-bottom: 30px; }
+    .wrapper .stol-wrapper .cart-group {
+      position: absolute;
+      z-index: 10; }
+      .wrapper .stol-wrapper .cart-group.one {
+        left: 0;
+        top: 0; }
+      .wrapper .stol-wrapper .cart-group.two {
+        top: 0;
+        right: 0; }
+      .wrapper .stol-wrapper .cart-group.three {
+        bottom: 0;
+        left: 0; }
+      .wrapper .stol-wrapper .cart-group.four {
+        bottom: 0;
+        right: 0; }
+      .wrapper .stol-wrapper .cart-group .fishka {
+        width: 34px;
+        height: 35px;
+        position: absolute;
+        left: -30px;
+        top: 12px;
+        -webkit-border-radius: 50%;
+                border-radius: 50%; }
+        .wrapper .stol-wrapper .cart-group .fishka.active {
+          -webkit-box-shadow: -3px -2px 5px 2px #f8d32c;
+                  box-shadow: -3px -2px 5px 2px #f8d32c; }
+        .wrapper .stol-wrapper .cart-group .fishka.no-active:before {
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.37);
+          position: absolute;
+          content: "";
+          left: 0;
+          top: 0;
+          -webkit-border-radius: 50%;
+                  border-radius: 50%; }
+      .wrapper .stol-wrapper .cart-group .row-carts .item {
+        overflow: hidden;
+        float: left;
+        width: 32px;
+        height: 43px;
+        -webkit-border-radius: 5px;
+                border-radius: 5px;
+        position: relative; }
+        .wrapper .stol-wrapper .cart-group .row-carts .item:first-child {
+          -webkit-transform: rotate(-10deg);
+              -ms-transform: rotate(-10deg);
+                  transform: rotate(-10deg); }
+        .wrapper .stol-wrapper .cart-group .row-carts .item:last-child {
+          -webkit-transform: rotate(14deg);
+              -ms-transform: rotate(14deg);
+                  transform: rotate(14deg);
+          margin-left: -10px; }
+      .wrapper .stol-wrapper .cart-group .row-carts.no-active .item:before {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.37);
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        -webkit-border-radius: 4px;
+                border-radius: 4px; }
+      .wrapper .stol-wrapper .cart-group .row-carts.active .item {
+        -webkit-box-shadow: 0px 0px 5px 2px #f8d32c;
+                box-shadow: 0px 0px 5px 2px #f8d32c; }
+      .wrapper .stol-wrapper .cart-group .stavka {
+        clear: both;
+        color: #e5e0c4;
+        font-weight: bold;
+        background-color: #edb722;
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#edb722), to(#cd6c05));
+        background-image: -webkit-linear-gradient(#edb722, #cd6c05);
+        background-image: -o-linear-gradient(#edb722, #cd6c05);
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        top: -5px;
+        -webkit-border-radius: 4px;
+                border-radius: 4px;
+        width: 46px;
+        margin: auto;
+        padding: 4px;
+        font-size: 11px; }
+        .wrapper .stol-wrapper .cart-group .stavka.no-active:before {
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.37);
+          position: absolute;
+          content: "";
+          left: 0;
+          top: 0;
+          -webkit-border-radius: 4px;
+                  border-radius: 4px; }
+        .wrapper .stol-wrapper .cart-group .stavka.active {
+          -webkit-box-shadow: 0px 3px 5px 0px #f8d32c;
+                  box-shadow: 0px 3px 5px 0px #f8d32c; }
+        .wrapper .stol-wrapper .cart-group .stavka.lost {
+          text-transform: uppercase;
+          background-color: #ec8024;
+          background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ec8024), to(#d36546));
+          background-image: -webkit-linear-gradient(#ec8024, #d36546);
+          background-image: -o-linear-gradient(#ec8024, #d36546); }
+        .wrapper .stol-wrapper .cart-group .stavka.wins {
+          text-transform: uppercase;
+          background-color: #81c33b;
+          background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#81c33b), to(#1b7b10));
+          background-image: -webkit-linear-gradient(#81c33b, #1b7b10);
+          background-image: -o-linear-gradient(#81c33b, #1b7b10); }
+      .wrapper .stol-wrapper .cart-group .time {
+        font-weight: bold;
+        color: #ddebdf;
+        background: url(../img/time.png) no-repeat;
+        height: 22px;
+        width: 22px;
+        text-align: center;
+        font-size: 11px;
+        padding: 5px 0;
+        position: absolute;
+        bottom: -8px;
+        left: -8px;
+        z-index: 1;
+        -webkit-border-radius: 50%;
+                border-radius: 50%; }
+        .wrapper .stol-wrapper .cart-group .time.active {
+          -webkit-box-shadow: -2px 3px 5px 0px #f8d32c;
+                  box-shadow: -2px 3px 5px 0px #f8d32c; }
+        .wrapper .stol-wrapper .cart-group .time.no-active:before {
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.37);
+          position: absolute;
+          content: "";
+          left: 0;
+          top: 0;
+          -webkit-border-radius: 50%;
+                  border-radius: 50%; }
+    .wrapper .stol-wrapper .person {
+      text-align: center;
+      margin-bottom: -33px; }
+    .wrapper .stol-wrapper .stol {
+      z-index: 1;
+      position: relative;
+      width: 267px;
+      margin: auto;
+      height: 143px;
+      background: url(../img/stol.png) no-repeat;
+      padding: 10px;
+      -webkit-background-size: contain;
+              background-size: contain; }
+      .wrapper .stol-wrapper .stol h1 {
+        color: #c0d7c0;
+        font-size: 15.41px;
+        text-align: center;
+        font-family: "Days";
+        margin: 7px 0; }
+      .wrapper .stol-wrapper .stol .row-carts {
+        text-align: center; }
+        .wrapper .stol-wrapper .stol .row-carts .item {
+          display: inline-block;
+          width: 29px;
+          height: 43px;
+          overflow: hidden;
+          -webkit-border-radius: 2px;
+                  border-radius: 2px; }
+          .wrapper .stol-wrapper .stol .row-carts .item img {
+            width: auto;
+            height: auto; }
+      .wrapper .stol-wrapper .stol .title-company-name {
+        font-size: 18px;
+        color: #4e9950;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "Days"; }
